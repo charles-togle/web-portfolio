@@ -13,11 +13,16 @@
     />
   </head>
   <body>
-    <header>
+    <header onclick="ShowNavigation()">
       <img src="Dependencies/burger-menu-svgrepo-com.svg" alt="Navigation" />
       <p>Navigation</p>
     </header>
-    <section class="hero">
+    <aside>
+      <p>Navigation</p>
+      <a href="#home">Home</a><a href="#about">About Me</a
+      ><a href="#projects">Projects</a>
+    </aside>
+    <section class="hero" id="home">
       <img src="Dependencies/CateringManagement.png" alt="Hero Image" />
       <p>
         Creating <br />
@@ -27,7 +32,7 @@
       </p>
       <a href="#spotlight">view my works</a>
     </section>
-    <section class="about-me">
+    <section class="about-me" id="about">
       <div class="left">
         <h3 class="about">About Me</h3>
         <p>
@@ -100,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects" id = "projects">
       <h2>Projects</h2>
       <div class="proj1" id="spotlight">
         <img src="Dependencies/CateringManagement.png" alt="" />
@@ -116,25 +121,46 @@
           class="img-eventlistener eventlistener1"
           onclick="changeSpotlight('proj1')"
         >
-          <img src="Dependencies/CateringManagement.png" alt="" />
+          <img
+            src="Dependencies/CateringManagement.png"
+            alt="Catering Management"
+          />
         </div>
         <div
           class="img-eventlistener eventlistener2"
           onclick="changeSpotlight('proj2')"
         >
-          <img src="Dependencies/AirplaneTicketingCSharp.png" alt="" />
+          <img
+            src="Dependencies/AirplaneTicketingCSharp.png"
+            alt="Airplane Ticketing System using CSharp"
+          />
         </div>
         <div
           class="img-eventlistener eventlistener3"
           onclick="changeSpotlight('proj3')"
         >
-          <img src="Dependencies/CashDenomination.png" alt="" />
+          <img
+            src="Dependencies/CashDenomination.png"
+            alt="Cash Denomination System"
+          />
         </div>
         <div
           class="img-eventlistener eventlistener4"
           onclick="changeSpotlight('proj4')"
         >
-          <img src="Dependencies/AirplaneTicketingReact.png" alt="" />
+          <img
+            src="Dependencies/AirplaneTicketingReact.png"
+            alt="Airplane Ticketing using ReactJS"
+          />
+        </div>
+        <div
+          class="img-eventlistener eventlistener5"
+          onclick="changeSpotlight('proj5')"
+        >
+          <img
+            src="Dependencies/PitogoAppointment.png"
+            alt="Pitogo Appointment System"
+          />
         </div>
       </div>
     </section>
@@ -169,6 +195,11 @@
           in progress
         </p>
         <div class="rectangle"></div>`,
+        proj5: `<img src="Dependencies/PitogoAppointment.png" alt="" />
+        <p>
+          Belonged to the team that created the Pitogo Virtual Appointment System in which users will be able to get paper works done online. This system is programmed using HTML, CSS, JavaScript, and Google API for Google Sheets 
+        </p>
+        <div class="rectangle"></div>`,
       };
       const changeSpotlight = (source) => {
         spotlight.innerHTML = projects[source];
@@ -177,6 +208,28 @@
         });
         spotlight.classList.add(source);
       };
+
+      const navigation = document.querySelector("aside");
+      const ShowNavigation = () => {
+        navigation.classList.toggle("show");
+      };
+
+      document.addEventListener("click", (e) => {
+        const header = document.querySelector("header");
+        const aside = document.querySelector("aside");
+
+        if (!header.contains(e.target) && !aside.contains(e.target)) {
+          aside.classList.remove("show");
+        }
+      });
+
+      const asideLinks = document.querySelectorAll("aside a");
+
+      asideLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("show");
+        });
+      });
     </script>
   </body>
 </html>
