@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #2e2e2e;
+  background-color: #272626;
   padding: 3rem;
 }
 
@@ -63,5 +63,76 @@ section.hero {
       rgba(255, 255, 255, 0.3) 100%
     );
     cursor: pointer;
+  }
+}
+
+section.about-me {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10vh;
+  overflow: hidden;
+  div.left {
+    width: 50%;
+    h3 {
+      font-size: 2rem;
+      font-family: "Kumbh Sans", sans-serif;
+      color: white;
+      margin: 3rem 0 1rem 0;
+    }
+    h3.about{
+        margin-top: 0;
+    }
+    p:nth-of-type(1) {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    p {
+      font-size: 1rem;
+      font-family: "Kumbh Sans", sans-serif;
+      color: white;
+    }
+
+    div.experiences {
+      display: flex;
+      gap: 6rem;
+    }
+    div.tools-div {
+      display: flex;
+      gap: 4rem;
+    }
+  }
+  div.right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .profile-picture {
+      width: 55%;
+      margin-bottom: 7vh;
+
+    }
+
+    div.contact {
+      width: 100%;
+      display: flex;
+      text-align: left;
+      justify-content: baseline;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 3vh;
+      a,
+      p {
+        color: white;
+        font-family: "Kumbh Sans", sans-serif;
+      }
+      img {
+        width: 5%;
+      }
+    }
   }
 }
