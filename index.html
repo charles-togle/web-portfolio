@@ -25,7 +25,7 @@
         <br />
         <b>fast and efficient</b>
       </p>
-      <button>view my works</button>
+      <a href="#spotlight">view my works</a>
     </section>
     <section class="about-me">
       <div class="left">
@@ -101,7 +101,82 @@
       </div>
     </section>
     <section class="projects">
-        
+      <h2>Projects</h2>
+      <div class="proj1" id="spotlight">
+        <img src="Dependencies/CateringManagement.png" alt="" />
+        <p>
+          3M’s Catering Management System is designed to lessen planning time
+          and scheduling for appointments, this system is programmed using HTML,
+          CSS, JavaScript, PHP and MySQL for data handling
+        </p>
+        <div class="rectangle"></div>
+      </div>
+      <div class="buttons">
+        <div
+          class="img-eventlistener eventlistener1"
+          onclick="changeSpotlight('proj1')"
+        >
+          <img src="Dependencies/CateringManagement.png" alt="" />
+        </div>
+        <div
+          class="img-eventlistener eventlistener2"
+          onclick="changeSpotlight('proj2')"
+        >
+          <img src="Dependencies/AirplaneTicketingCSharp.png" alt="" />
+        </div>
+        <div
+          class="img-eventlistener eventlistener3"
+          onclick="changeSpotlight('proj3')"
+        >
+          <img src="Dependencies/CashDenomination.png" alt="" />
+        </div>
+        <div
+          class="img-eventlistener eventlistener4"
+          onclick="changeSpotlight('proj4')"
+        >
+          <img src="Dependencies/AirplaneTicketingReact.png" alt="" />
+        </div>
+      </div>
     </section>
+    <script>
+      const spotlight = document.getElementById("spotlight");
+      const projects = {
+        proj1: `<img src="Dependencies/CateringManagement.png" alt="">
+        <p>
+          3M’s Catering Management System is designed to lessen planning time
+          and scheduling for appointments, this system is programmed using HTML,
+          CSS, JavaScript, PHP and MySQL for data handling
+        </p>
+        <div class="rectangle"></div>`,
+        proj2: `<img src="Dependencies/AirPlaneTicketingCSharp.png" alt="" />
+        <p>
+          Airplane Ticketing System that my team created during our Object
+          Oriented Programming 2 programmed using C#, and MySQL for data
+          handling
+        </p>
+        <div class="rectangle"></div>`,
+        proj3: `<img src="Dependencies/CashDenomination.png" alt="" />
+        <p>
+          This system is designed to determine the exact denominations of change
+          based on the available cash in the register. It is programmed in
+          Python.
+        </p>
+        <div class="rectangle"></div>`,
+        proj4: `<img src="Dependencies/AirplaneTicketingReact.png" alt="" />
+        <p>
+          Migrated the Airplane Ticketing System to a different tech stack,
+          ReactJS, MySQL, ExpressJS, and NodeJS was used. This is still a work
+          in progress
+        </p>
+        <div class="rectangle"></div>`,
+      };
+      const changeSpotlight = (source) => {
+        spotlight.innerHTML = projects[source];
+        spotlight.classList.forEach((className) => {
+          spotlight.classList.remove(className);
+        });
+        spotlight.classList.add(source);
+      };
+    </script>
   </body>
 </html>
