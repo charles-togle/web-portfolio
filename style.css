@@ -186,7 +186,11 @@ section.about-me {
 section.projects {
   position: relative;
   width: 100%;
+<<<<<<< Updated upstream
   margin-block: 10vh;
+=======
+  margin-block: 10vh 15vh;
+>>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -233,8 +237,13 @@ section.projects {
     display: flex;
     align-items: center;
     position: relative;
+<<<<<<< Updated upstream
     justify-content: center;  
     background-color: rgba(0, 0, 0, 0.1);
+=======
+    justify-content: center;
+    min-height: 10rem;
+>>>>>>> Stashed changes
     div {
       position: absolute;
       height: 100%;
@@ -250,12 +259,22 @@ section.projects {
       object-fit: cover;
     }
     .content1 {
+<<<<<<< Updated upstream
       transform: translateX(-40%);
+=======
+      transform: translateX(-60%);
+      filter: blur(4px) brightness(0.3);
+>>>>>>> Stashed changes
       z-index: 1;
       height: 60%;
     }
     .content2 {
+<<<<<<< Updated upstream
       transform: translateX(-20%);
+=======
+      transform: translateX(-25%);
+      filter: blur(2px) brightness(0.5);
+>>>>>>> Stashed changes
       z-index: 2;
       height: 80%;
     }
@@ -264,12 +283,22 @@ section.projects {
       z-index: 3;
     }
     .content4 {
+<<<<<<< Updated upstream
       transform: translateX(20%);
+=======
+      transform: translateX(25%);
+      filter: blur(2px) brightness(0.5);
+>>>>>>> Stashed changes
       z-index: 2;
       height: 80%;
     }
     .content5 {
+<<<<<<< Updated upstream
       transform: translateX(40%);
+=======
+      transform: translateX(50%);
+      filter: blur(4px) brightness(0.3);
+>>>>>>> Stashed changes
       z-index: 1;
       height: 60%;
     }
