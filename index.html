@@ -11,7 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="Dependencies/icon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="Dependencies/icon.png"
+      type="image/x-icon"
+    />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header onclick="ShowNavigation()">
@@ -24,7 +29,7 @@
       ><a href="#projects">Projects</a>
     </aside>
     <section class="hero" id="home">
-    <div class="solid-color"></div>
+      <div class="solid-color"></div>
       <p>
         Creating <br />
         Software Solutions
@@ -118,8 +123,8 @@
       </div>
       <div class="buttons">
         <div
-          class="img-eventlistener eventlistener1"
-          onclick="changeSpotlight('proj1')"
+          class="img-eventlistener eventlistener1 content1"
+          onclick="changeSpotlight(event, 'proj1')"
         >
           <img
             src="Dependencies/CateringManagement.png"
@@ -127,8 +132,8 @@
           />
         </div>
         <div
-          class="img-eventlistener eventlistener2"
-          onclick="changeSpotlight('proj2')"
+          class="img-eventlistener eventlistener2 content2"
+          onclick="changeSpotlight(event, 'proj2')"
         >
           <img
             src="Dependencies/AirplaneTicketingCSharp.png"
@@ -136,8 +141,8 @@
           />
         </div>
         <div
-          class="img-eventlistener eventlistener3"
-          onclick="changeSpotlight('proj3')"
+          class="img-eventlistener eventlistener3 content3"
+          onclick="changeSpotlight(event, 'proj3')"
         >
           <img
             src="Dependencies/CashDenomination.png"
@@ -145,8 +150,8 @@
           />
         </div>
         <div
-          class="img-eventlistener eventlistener4"
-          onclick="changeSpotlight('proj4')"
+          class="img-eventlistener eventlistener4 content4"
+          onclick="changeSpotlight(event, 'proj4')"
         >
           <img
             src="Dependencies/AirplaneTicketingReact.png"
@@ -154,77 +159,15 @@
           />
         </div>
         <div
-          class="img-eventlistener eventlistener5"
-          onclick="changeSpotlight('proj5')"
+          class="img-eventlistener eventlistener5 content5"
+          onclick="changeSpotlight(event, 'proj5')"
         >
           <img
             src="Dependencies/PitogoAppointment.png"
-            alt="Pitogo Appointment System"
+            alt="Pitogo Virtual Appointment System"
           />
         </div>
       </div>
     </section>
-    <script>
-      const spotlight = document.getElementById("spotlight");
-      const projects = {
-        proj1: `<img src="Dependencies/CateringManagement.png" alt="">
-        <p>
-          3M’s Catering Management System is designed to lessen planning time
-          and scheduling for appointments, this system is programmed using HTML,
-          CSS, JavaScript, PHP and MySQL for data handling
-        </p>`,
-        proj2: `<img src="Dependencies/AirplaneTicketingCSharp.png" alt="" />
-        <p>
-          Airplane Ticketing System that my team created during our Object
-          Oriented Programming 2 programmed using C#, and MySQL for data
-          handling
-        </p>`,
-        proj3: `<img src="Dependencies/CashDenomination.png" alt="" />
-        <p>
-          This system is designed to determine the exact denominations of change
-          based on the available cash in the register. It is programmed in
-          Python.
-        </p>`,
-        proj4: `<img src="Dependencies/AirplaneTicketingReact.png" alt="" />
-        <p>
-          Migrated the Airplane Ticketing System to a different tech stack,
-          ReactJS, MySQL, ExpressJS, and NodeJS was used. This is still a work
-          in progress
-        </p>`,
-        proj5: `<img src="Dependencies/PitogoAppointment.png" alt="" />
-        <p>
-          Belonged to the team that created the Pitogo Virtual Appointment System in which users will be able to get paper works done online. This system is programmed using HTML, CSS, JavaScript, and Google API for Google Sheets 
-        </p>`,
-      };
-      const changeSpotlight = (source) => {
-        spotlight.innerHTML = projects[source];
-        spotlight.classList.forEach((className) => {
-          spotlight.classList.remove(className);
-        });
-        spotlight.classList.add(source);
-      };
-
-      const navigation = document.querySelector("aside");
-      const ShowNavigation = () => {
-        navigation.classList.toggle("show");
-      };
-
-      document.addEventListener("click", (e) => {
-        const header = document.querySelector("header");
-        const aside = document.querySelector("aside");
-
-        if (!header.contains(e.target) && !aside.contains(e.target)) {
-          aside.classList.remove("show");
-        }
-      });
-
-      const asideLinks = document.querySelectorAll("aside a");
-
-      asideLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navigation.classList.remove("show");
-        });
-      });
-    </script>
   </body>
 </html>
