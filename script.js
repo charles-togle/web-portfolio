@@ -35,8 +35,8 @@ const eventListeners = document.querySelectorAll(".img-eventlistener");
 const changeSpotlight = (e, source) => {
   const parentDiv = e.target.closest(".img-eventlistener");
 
-  const eventlistenerClass = Array.from(parentDiv.classList).find(
-    (className) => className.includes("content")
+  const eventlistenerClass = Array.from(parentDiv.classList).find((className) =>
+    className.includes("content")
   );
 
   const contentNumber = eventlistenerClass.substring(7);
@@ -44,20 +44,16 @@ const changeSpotlight = (e, source) => {
   console.log(contentNumber);
 
   eventListeners.forEach((eventListener) => {
-    const currentEventlistener = parseInt(eventListener.classList[2].substring(7));
-    const addedContentNumber = currentEventlistener + toAdd;
-    const finalContentNumber = addedContentNumber % 5;
-
+    const currentEventlistener = parseInt(
+      eventListener.classList[2].substring(7)
+    );
     eventListener.classList.remove("content" + currentEventlistener);
-    if (currentEventlistener == 5) {
-      eventListener.classList.add("content1" );
-    } else if (currentEventlistener == 1) {
-      eventListener.classList.add("content5");
-    } else {
-      eventListener.classList.add(
-        "content" + (finalAddNumber)
-      );
-    }
+
+    const addedContentNumber = currentEventlistener + toAdd;
+    let finalContentNumber = addedContentNumber % 5;
+    finalContentNumber = finalContentNumber == 0 ? 5 : finalContentNumber;
+
+    eventListener.classList.add("content" + finalContentNumber);
   });
 
   spotlight.innerHTML = projects[source];

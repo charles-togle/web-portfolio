@@ -74,7 +74,6 @@ section.hero {
   position: relative;
   padding-top: 5vh;
 
-
   p {
     font-size: 5rem;
     position: absolute;
@@ -226,52 +225,47 @@ section.projects {
     }
   }
 
-  div.buttons{
+  div.buttons {
     width: 100vw;
-    height: 15rem;
+    height: 20rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.1);
-    div.content-to-right, div.content-to-left{
-      position: absolute;
-      height: 10%;
-      width: 50%;
-    }
-    div{
+    div {
       position: absolute;
       height: 100%;
+      transition: all 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
     }
-    img{
+    img {
       height: 100%;
     }
-
-    .content1{
-      left: calc(60% - 35%);
+    .content1 {
+      transform: translateX(-100%);
       z-index: 1;
-      height: 50%;
+      height: 60%;
     }
-    .content2{
-      left: calc(80% - 50% - 1rem);
+    .content2 {
+      transform: translateX(-70%);
       z-index: 2;
-      height: 70%;
-
+      height: 80%;
     }
-    .content3{
+    .content3 {
+      transform: translateX(0%);
       z-index: 3;
-      height: 100%;
     }
-    .content4{
-      right: calc(80% - 50% - 1rem);
+    .content4 {
+      transform: translateX(50%);
       z-index: 2;
-      height: 70%;
-
+      height: 80%;
     }
-    .content5{
-      right: calc(60% - 35%);
+    .content5 {
+      transform: translateX(100%);
       z-index: 1;
-      height: 50%;
+      height: 60%;
     }
   }
 
