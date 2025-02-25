@@ -250,12 +250,12 @@ section.projects {
       object-fit: cover;
     }
     .content1 {
-      transform: translateX(-50%);
+      transform: translateX(-60%);
       z-index: 1;
       height: 60%;
     }
     .content2 {
-      transform: translateX(-20%);
+      transform: translateX(-25%);
       z-index: 2;
       height: 80%;
     }
@@ -264,7 +264,7 @@ section.projects {
       z-index: 3;
     }
     .content4 {
-      transform: translateX(20%);
+      transform: translateX(25%);
       z-index: 2;
       height: 80%;
     }
