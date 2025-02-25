@@ -242,11 +242,11 @@ section.projects {
       transition: all 0.5s ease-in-out;
       display: flex;
       align-items: center;
-      width: 40rem;
+      width: 20rem;
 
     }
     img {
-      height: 200%;
+      height: 250%;
       width: 100%;
       object-fit: cover;
     }
