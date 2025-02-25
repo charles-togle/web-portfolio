@@ -40,7 +40,7 @@ const changeSpotlight = (e, source) => {
   );
 
   const contentNumber = eventlistenerClass.substring(7);
-  const toAdd = Math.abs(currentSpotlight - parseInt(contentNumber));
+  const toAdd = currentSpotlight - parseInt(contentNumber);
   console.log(contentNumber);
 
   eventListeners.forEach((eventListener) => {
@@ -49,9 +49,7 @@ const changeSpotlight = (e, source) => {
     );
     eventListener.classList.remove("content" + currentEventlistener);
 
-    const addedContentNumber = currentEventlistener + toAdd;
-    let finalContentNumber = addedContentNumber % 5;
-    finalContentNumber = finalContentNumber == 0 ? 5 : finalContentNumber;
+    let finalContentNumber = ((currentEventlistener + toAdd - 1 + 5) % 5) + 1;
 
     eventListener.classList.add("content" + finalContentNumber);
   });

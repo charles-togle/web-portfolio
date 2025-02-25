@@ -231,7 +231,7 @@ section.projects {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
+    justify-content: center;  
     background-color: rgba(0, 0, 0, 0.1);
     div {
       position: absolute;
@@ -239,31 +239,35 @@ section.projects {
       transition: all 0.5s ease-in-out;
       display: flex;
       align-items: center;
+      width: 40rem;
+
     }
     img {
       height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
     .content1 {
-      transform: translateX(-100%);
+      transform: translateX(-40%);
       z-index: 1;
-      height: 60%;
+      height: 40%;
     }
     .content2 {
-      transform: translateX(-70%);
+      transform: translateX(-20%);
       z-index: 2;
-      height: 80%;
+      height: 60%;
     }
     .content3 {
       transform: translateX(0%);
       z-index: 3;
     }
     .content4 {
-      transform: translateX(50%);
+      transform: translateX(20%);
       z-index: 2;
       height: 80%;
     }
     .content5 {
-      transform: translateX(100%);
+      transform: translateX(40%);
       z-index: 1;
       height: 60%;
     }
