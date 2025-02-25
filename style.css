@@ -233,7 +233,7 @@ section.projects {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;  
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.1);
     min-height: 10rem;
     div {
@@ -243,15 +243,14 @@ section.projects {
       display: flex;
       align-items: center;
       width: 20rem;
-
     }
     img {
-      height: 250%;
+      height: 150%;
       width: 100%;
       object-fit: cover;
     }
     .content1 {
-      transform: translateX(-40%);
+      transform: translateX(-50%);
       z-index: 1;
       height: 60%;
     }
@@ -270,7 +269,7 @@ section.projects {
       height: 80%;
     }
     .content5 {
-      transform: translateX(40%);
+      transform: translateX(50%);
       z-index: 1;
       height: 60%;
     }
